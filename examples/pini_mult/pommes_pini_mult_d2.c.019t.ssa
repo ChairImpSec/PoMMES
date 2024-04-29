@@ -1,0 +1,190 @@
+
+;; Function pini_multiplication (pini_multiplication, funcdef_no=0, decl_uid=4171, cgraph_uid=1, symbol_order=0)
+
+pini_multiplication (uint32_t * in_x, uint32_t * in_y, uint32_t * out_z)
+{
+  uint8_t l;
+  uint8_t k;
+  uint8_t j;
+  uint8_t i;
+  uint32_t r[3][3];
+  int _1;
+  int _2;
+  uint32_t * _3;
+  int _4;
+  int _5;
+  long unsigned int _6;
+  int _7;
+  int _8;
+  long unsigned int _9;
+  unsigned int _10;
+  unsigned int _11;
+  uint32_t * _12;
+  long unsigned int _13;
+  unsigned int _14;
+  unsigned int _15;
+  uint32_t * _16;
+  long unsigned int _17;
+  unsigned int _18;
+  unsigned int _19;
+  uint32_t * _20;
+  long unsigned int _21;
+  unsigned int _22;
+  unsigned int _23;
+  uint32_t * _24;
+  long unsigned int _25;
+  unsigned int _26;
+  unsigned int _27;
+  uint32_t * _28;
+  long unsigned int _29;
+  long unsigned int _30;
+  int _31;
+  int _32;
+  long unsigned int _33;
+  long unsigned int _34;
+  unsigned int _35;
+  unsigned int _36;
+  uint32_t * _37;
+  long unsigned int _38;
+  unsigned int _39;
+  unsigned int _40;
+  uint32_t * _41;
+  long unsigned int _42;
+  int _43;
+  int _44;
+  long unsigned int _45;
+  long unsigned int _46;
+  long unsigned int _47;
+  long unsigned int _48;
+  unsigned int _49;
+  unsigned int _50;
+  uint32_t * _51;
+  long unsigned int _52;
+
+  <bb 2> :
+  gimple_assign <integer_cst, i_62, 0, NULL, NULL>
+  goto <bb 7>; [INV]
+
+  <bb 3> :
+  gimple_assign <plus_expr, j_74, i_53, 1, NULL>
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  gimple_assign <nop_expr, _1, i_53, NULL, NULL>
+  gimple_assign <nop_expr, _2, j_54, NULL, NULL>
+  gimple_assign <addr_expr, _3, &r[_1][_2], NULL, NULL>
+  gimple_call <getRandomness, NULL, _3>
+  gimple_assign <nop_expr, _4, i_53, NULL, NULL>
+  gimple_assign <nop_expr, _5, j_54, NULL, NULL>
+  gimple_assign <array_ref, _6, r[_4][_5], NULL, NULL>
+  gimple_assign <nop_expr, _7, j_54, NULL, NULL>
+  gimple_assign <nop_expr, _8, i_53, NULL, NULL>
+  gimple_assign <negate_expr, _9, _6, NULL, NULL>
+  gimple_assign <ssa_name, r[_7][_8], _9, NULL, NULL>
+  gimple_assign <plus_expr, j_78, j_54, 1, NULL>
+
+  <bb 5> :
+  # gimple_phi <j_54, j_74(3), j_78(4)>
+  gimple_cond <le_expr, j_54, 2, NULL, NULL>
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  gimple_assign <plus_expr, i_75, i_53, 1, NULL>
+
+  <bb 7> :
+  # gimple_phi <i_53, i_62(2), i_75(6)>
+  gimple_cond <le_expr, i_53, 2, NULL, NULL>
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  gimple_assign <integer_cst, k_64, 0, NULL, NULL>
+  goto <bb 15>; [INV]
+
+  <bb 9> :
+  gimple_assign <nop_expr, _10, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _11, _10, 4, NULL>
+  gimple_assign <pointer_plus_expr, _12, in_x_66(D), _11, NULL>
+  gimple_assign <mem_ref, _13, *_12, NULL, NULL>
+  gimple_assign <nop_expr, _14, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _15, _14, 4, NULL>
+  gimple_assign <pointer_plus_expr, _16, in_y_67(D), _15, NULL>
+  gimple_assign <mem_ref, _17, *_16, NULL, NULL>
+  gimple_assign <nop_expr, _18, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _19, _18, 4, NULL>
+  gimple_assign <pointer_plus_expr, _20, out_z_68(D), _19, NULL>
+  gimple_assign <mult_expr, _21, _13, _17, NULL>
+  gimple_assign <ssa_name, *_20, _21, NULL, NULL>
+  gimple_assign <integer_cst, l_70, 0, NULL, NULL>
+  goto <bb 13>; [INV]
+
+  <bb 10> :
+  gimple_cond <ne_expr, l_56, k_55, NULL, NULL>
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  gimple_assign <nop_expr, _22, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _23, _22, 4, NULL>
+  gimple_assign <pointer_plus_expr, _24, out_z_68(D), _23, NULL>
+  gimple_assign <mem_ref, _25, *_24, NULL, NULL>
+  gimple_assign <nop_expr, _26, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _27, _26, 4, NULL>
+  gimple_assign <pointer_plus_expr, _28, in_x_66(D), _27, NULL>
+  gimple_assign <mem_ref, _29, *_28, NULL, NULL>
+  gimple_assign <plus_expr, _30, _29, 1, NULL>
+  gimple_assign <nop_expr, _31, k_55, NULL, NULL>
+  gimple_assign <nop_expr, _32, l_56, NULL, NULL>
+  gimple_assign <array_ref, _33, r[_31][_32], NULL, NULL>
+  gimple_assign <mult_expr, _34, _30, _33, NULL>
+  gimple_assign <nop_expr, _35, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _36, _35, 4, NULL>
+  gimple_assign <pointer_plus_expr, _37, in_x_66(D), _36, NULL>
+  gimple_assign <mem_ref, _38, *_37, NULL, NULL>
+  gimple_assign <nop_expr, _39, l_56, NULL, NULL>
+  gimple_assign <mult_expr, _40, _39, 4, NULL>
+  gimple_assign <pointer_plus_expr, _41, in_y_67(D), _40, NULL>
+  gimple_assign <mem_ref, _42, *_41, NULL, NULL>
+  gimple_assign <nop_expr, _43, k_55, NULL, NULL>
+  gimple_assign <nop_expr, _44, l_56, NULL, NULL>
+  gimple_assign <array_ref, _45, r[_43][_44], NULL, NULL>
+  gimple_assign <minus_expr, _46, _42, _45, NULL>
+  gimple_assign <mult_expr, _47, _38, _46, NULL>
+  gimple_assign <plus_expr, _48, _34, _47, NULL>
+  gimple_assign <nop_expr, _49, k_55, NULL, NULL>
+  gimple_assign <mult_expr, _50, _49, 4, NULL>
+  gimple_assign <pointer_plus_expr, _51, out_z_68(D), _50, NULL>
+  gimple_assign <plus_expr, _52, _25, _48, NULL>
+  gimple_assign <ssa_name, *_51, _52, NULL, NULL>
+
+  <bb 12> :
+  gimple_assign <plus_expr, l_73, l_56, 1, NULL>
+
+  <bb 13> :
+  # gimple_phi <l_56, l_70(9), l_73(12)>
+  gimple_cond <le_expr, l_56, 2, NULL, NULL>
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  gimple_assign <plus_expr, k_71, k_55, 1, NULL>
+
+  <bb 15> :
+  # gimple_phi <k_55, k_64(8), k_71(14)>
+  gimple_cond <le_expr, k_55, 2, NULL, NULL>
+    goto <bb 9>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  gimple_assign <constructor, r, {CLOBBER}, NULL, NULL>
+  gimple_return <NULL>
+
+}
+
+

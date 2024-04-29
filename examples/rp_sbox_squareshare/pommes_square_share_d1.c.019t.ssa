@@ -1,0 +1,40 @@
+
+;; Function square_share (square_share, funcdef_no=0, decl_uid=4171, cgraph_uid=1, symbol_order=0)
+
+square_share (uint8_t * a, uint32_t n)
+{
+  uint32_t i;
+  uint8_t * _1;
+  unsigned char _2;
+  int _3;
+  int _4;
+  uint8_t * _5;
+  unsigned char _6;
+
+  <bb 2> :
+  gimple_assign <integer_cst, i_9, 0, NULL, NULL>
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  gimple_assign <pointer_plus_expr, _1, a_12(D), i_7, NULL>
+  gimple_assign <mem_ref, _2, *_1, NULL, NULL>
+  gimple_assign <nop_expr, _3, _2, NULL, NULL>
+  gimple_call <square, _4, _3>
+  gimple_assign <pointer_plus_expr, _5, a_12(D), i_7, NULL>
+  gimple_assign <nop_expr, _6, _4, NULL, NULL>
+  gimple_assign <ssa_name, *_5, _6, NULL, NULL>
+  gimple_assign <plus_expr, i_15, i_7, 1, NULL>
+
+  <bb 4> :
+  # gimple_phi <i_7, i_9(2), i_15(3)>
+  gimple_cond <lt_expr, i_7, n_11(D), NULL, NULL>
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  gimple_return <NULL>
+
+}
+
+

@@ -1,0 +1,61 @@
+
+;; Function locality_refresh (locality_refresh, funcdef_no=0, decl_uid=4171, cgraph_uid=1, symbol_order=0)
+
+locality_refresh (uint32_t * in, uint32_t * out)
+{
+  uint32_t i;
+  uint32_t s;
+  uint32_t * _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  uint32_t * _4;
+  long unsigned int s.0_5;
+  uint32_t * _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  uint32_t * _9;
+  long unsigned int _10;
+  long unsigned int s.1_11;
+  long unsigned int _12;
+  uint32_t * _13;
+  long unsigned int _14;
+
+  <bb 2> :
+  gimple_assign <pointer_plus_expr, _1, out_17(D), 8, NULL>
+  gimple_assign <mem_ref, _2, MEM[(uint32_t *)in_19(D) + 8B], NULL, NULL>
+  gimple_assign <ssa_name, *_1, _2, NULL, NULL>
+  gimple_assign <integer_cst, i_21, 0, NULL, NULL>
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  gimple_call <getRandomness, NULL, &s, i_15>
+  gimple_assign <mult_expr, _3, i_15, 4, NULL>
+  gimple_assign <pointer_plus_expr, _4, out_17(D), _3, NULL>
+  gimple_assign <var_decl, s.0_5, s, NULL, NULL>
+  gimple_assign <ssa_name, *_4, s.0_5, NULL, NULL>
+  gimple_assign <pointer_plus_expr, _6, out_17(D), 8, NULL>
+  gimple_assign <mem_ref, _7, *_6, NULL, NULL>
+  gimple_assign <mult_expr, _8, i_15, 4, NULL>
+  gimple_assign <pointer_plus_expr, _9, in_19(D), _8, NULL>
+  gimple_assign <mem_ref, _10, *_9, NULL, NULL>
+  gimple_assign <var_decl, s.1_11, s, NULL, NULL>
+  gimple_assign <bit_xor_expr, _12, _10, s.1_11, NULL>
+  gimple_assign <pointer_plus_expr, _13, out_17(D), 8, NULL>
+  gimple_assign <bit_xor_expr, _14, _7, _12, NULL>
+  gimple_assign <ssa_name, *_13, _14, NULL, NULL>
+  gimple_assign <plus_expr, i_26, i_15, 1, NULL>
+
+  <bb 4> :
+  # gimple_phi <i_15, i_21(2), i_26(3)>
+  gimple_cond <le_expr, i_15, 1, NULL, NULL>
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  gimple_assign <constructor, s, {CLOBBER}, NULL, NULL>
+  gimple_return <NULL>
+
+}
+
+

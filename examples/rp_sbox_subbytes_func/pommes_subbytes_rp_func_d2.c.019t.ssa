@@ -1,0 +1,183 @@
+
+;; Function subbyte_rp_share_func (subbyte_rp_share_func, funcdef_no=0, decl_uid=4171, cgraph_uid=1, symbol_order=0)
+
+subbyte_rp_share_func (uint8_t * a, int n)
+{
+  uint8_t y2[3];
+  uint8_t w2[3];
+  uint8_t w[3];
+  uint8_t y[3];
+  uint8_t one[3];
+  uint8_t z2[3];
+  uint8_t z[3];
+  uint32_t i;
+  uint8_t taffine[256];
+  long unsigned int n.0_1;
+  uint8_t * _2;
+  unsigned char _3;
+  long unsigned int n.1_4;
+  unsigned char _5;
+  long unsigned int n.2_6;
+  unsigned char _7;
+  long unsigned int n.3_8;
+  unsigned char _9;
+  long unsigned int n.4_10;
+  uint8_t * _11;
+  unsigned char _12;
+  int _13;
+  uint8_t * _14;
+  unsigned char _15;
+  long unsigned int n.5_16;
+  unsigned int n.6_17;
+  unsigned int _18;
+  unsigned char _19;
+  unsigned char _20;
+
+  <bb 2> :
+  gimple_assign <string_cst, taffine, "c|]B\x1f\x00!>\x9b\x84\xa5\xba\xe7\xf8\xd9\xc6\x92\x8d\xac\xb3\xee\xf1\xd0\xcfjuTK\x16\t(7\x80\x9f\xbe\xa1\xfc\xe3\xc2\xddxgFY\x04\x1b:%qnOP\r\x123,\x89\x96\xb7\xa8\xf5\xea\xcb\xd4\xa4\xbb\x9a\x85\xd8\xc7\xe6\xf9\\Cb} ?\x1e\x01UJkt)6\x17\b\xad\xb2\x93\x8c\xd1\xce\xef\xf0GXyf;$\x05\x1a\xbf\xa0\x81\x9e\xc3\xdc\xfd\xe2\xb6\xa9\x88\x97\xca\xd5\xf4\xebNQpo2-\f\x13\xec\xf3\xd2\xcd\x90\x8f\xae\xb1\x14\v*5hwVI\x1d\x02#<a~_@\xe5\xfa\xdb\xc4\x99\x86\xa7\xb8\x0f\x101.slMR\xf7\xe8\xc9\xd6\x8b\x94\xb5\xaa\xfe\xe1\xc0\xdf\x82\x9d\xbc\xa3\x06\x198\'zeD[+4\x15\nWHiv\xd3\xcc\xed\xf2\xaf\xb0\x91\x8e\xda\xc5\xe4\xfb\xa6\xb9\x98\x87\"=\x1c\x03^A`\x7f\xc8\xd7\xf6\xe9\xb4\xab\x8a\x950/\x0e\x11LSrm9&\x07\x18EZ{d\xc1\xde\xff\xe0\xbd\xa2\x83\x9c", NULL, NULL>
+  gimple_assign <integer_cst, i_36, 1, NULL, NULL>
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  gimple_assign <integer_cst, one[i_21], 0, NULL, NULL>
+  gimple_assign <plus_expr, i_78, i_21, 1, NULL>
+
+  <bb 4> :
+  # gimple_phi <i_21, i_36(2), i_78(3)>
+  gimple_assign <nop_expr, n.0_1, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_21, n.0_1, NULL, NULL>
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  gimple_assign <integer_cst, one[0], 1, NULL, NULL>
+  gimple_assign <integer_cst, i_39, 0, NULL, NULL>
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  gimple_assign <pointer_plus_expr, _2, a_43(D), i_22, NULL>
+  gimple_assign <mem_ref, _3, *_2, NULL, NULL>
+  gimple_assign <ssa_name, z[i_22], _3, NULL, NULL>
+  gimple_assign <plus_expr, i_76, i_22, 1, NULL>
+
+  <bb 7> :
+  # gimple_phi <i_22, i_39(5), i_76(6)>
+  gimple_assign <nop_expr, n.1_4, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_22, n.1_4, NULL, NULL>
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  gimple_call <square_share, NULL, &z, n_37(D)>
+  gimple_call <multshare, NULL, &z, &one, &z2, n_37(D)>
+  gimple_assign <integer_cst, i_42, 0, NULL, NULL>
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  gimple_assign <array_ref, _5, z2[i_23], NULL, NULL>
+  gimple_assign <ssa_name, z[i_23], _5, NULL, NULL>
+  gimple_assign <plus_expr, i_74, i_23, 1, NULL>
+
+  <bb 10> :
+  # gimple_phi <i_23, i_42(8), i_74(9)>
+  gimple_assign <nop_expr, n.2_6, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_23, n.2_6, NULL, NULL>
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  gimple_call <multshare, NULL, &z, a_43(D), &y, n_37(D)>
+  gimple_assign <integer_cst, i_45, 0, NULL, NULL>
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  gimple_assign <array_ref, _7, y[i_24], NULL, NULL>
+  gimple_assign <ssa_name, w[i_24], _7, NULL, NULL>
+  gimple_assign <plus_expr, i_72, i_24, 1, NULL>
+
+  <bb 13> :
+  # gimple_phi <i_24, i_45(11), i_72(12)>
+  gimple_assign <nop_expr, n.3_8, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_24, n.3_8, NULL, NULL>
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  gimple_call <square_share, NULL, &w, n_37(D)>
+  gimple_call <square_share, NULL, &w, n_37(D)>
+  gimple_call <multshare, NULL, &w, &one, &w2, n_37(D)>
+  gimple_assign <integer_cst, i_49, 0, NULL, NULL>
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+  gimple_assign <array_ref, _9, w2[i_25], NULL, NULL>
+  gimple_assign <ssa_name, w[i_25], _9, NULL, NULL>
+  gimple_assign <plus_expr, i_70, i_25, 1, NULL>
+
+  <bb 16> :
+  # gimple_phi <i_25, i_49(14), i_70(15)>
+  gimple_assign <nop_expr, n.4_10, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_25, n.4_10, NULL, NULL>
+    goto <bb 15>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  gimple_call <multshare, NULL, &y, &w, &y2, n_37(D)>
+  gimple_call <square_share, NULL, &y2, n_37(D)>
+  gimple_call <square_share, NULL, &y2, n_37(D)>
+  gimple_call <square_share, NULL, &y2, n_37(D)>
+  gimple_call <square_share, NULL, &y2, n_37(D)>
+  gimple_call <multshare, NULL, &w, &y2, &y, n_37(D)>
+  gimple_call <multshare, NULL, &y, &z, a_43(D), n_37(D)>
+  gimple_assign <integer_cst, i_57, 0, NULL, NULL>
+  goto <bb 19>; [INV]
+
+  <bb 18> :
+  gimple_assign <pointer_plus_expr, _11, a_43(D), i_26, NULL>
+  gimple_assign <mem_ref, _12, *_11, NULL, NULL>
+  gimple_assign <nop_expr, _13, _12, NULL, NULL>
+  gimple_assign <pointer_plus_expr, _14, a_43(D), i_26, NULL>
+  gimple_assign <array_ref, _15, taffine[_13], NULL, NULL>
+  gimple_assign <ssa_name, *_14, _15, NULL, NULL>
+  gimple_assign <plus_expr, i_68, i_26, 1, NULL>
+
+  <bb 19> :
+  # gimple_phi <i_26, i_57(17), i_68(18)>
+  gimple_assign <nop_expr, n.5_16, n_37(D), NULL, NULL>
+  gimple_cond <lt_expr, i_26, n.5_16, NULL, NULL>
+    goto <bb 18>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 20> :
+  gimple_assign <nop_expr, n.6_17, n_37(D), NULL, NULL>
+  gimple_assign <bit_and_expr, _18, n.6_17, 1, NULL>
+  gimple_cond <eq_expr, _18, 0, NULL, NULL>
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  gimple_assign <mem_ref, _19, *a_43(D), NULL, NULL>
+  gimple_assign <bit_xor_expr, _20, _19, 99, NULL>
+  gimple_assign <ssa_name, *a_43(D), _20, NULL, NULL>
+
+  <bb 22> :
+  gimple_assign <constructor, taffine, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, z, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, z2, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, one, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, y, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, w, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, w2, {CLOBBER}, NULL, NULL>
+  gimple_assign <constructor, y2, {CLOBBER}, NULL, NULL>
+  gimple_return <NULL>
+
+}
+
+
